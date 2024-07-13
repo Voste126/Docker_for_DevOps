@@ -1,0 +1,15 @@
+# Each instruction in this file generates a new layer that gets pushed to your local image cache
+FROM python:latest
+
+# Identify the maintainer of an image
+LABEL version="0.0.1"
+LABEL maitainer="steveaustine126@gmail.com"
+
+# Set the working directory
+WORKDIR /app
+
+# Add the Python script
+ADD my-script.py /app/
+
+# Execute the Python script (if needed)
+CMD ["python", "/app/my-script.py"]
